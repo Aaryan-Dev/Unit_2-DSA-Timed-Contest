@@ -7,6 +7,7 @@
 // Note : You have to take the input yourself
 
 
+// Hint use do while loop and N=arr.indexOf(max);
 function array(N, K, arr){
     let count = 0;
     do{
