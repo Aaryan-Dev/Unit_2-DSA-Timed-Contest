@@ -7,12 +7,37 @@
 // Note : You have to take the input yourself
 
 
-
-
-//***Hint use do while loop and N = arr.indexOf(max);***
+function array(N, K, arr){
+    let count = 0;
+    do{
+        let max = -Infinity;
+        for(j=0; j<N; j++){
+            if(max<arr[j]){
+                max=arr[j];
+                
+            }
+        }
+        count++
+        // console.log(arr.indexOf(max));
+        N = arr.indexOf(max);
+}while(N!==0);
+        console.log(K*count);
+}
 
 function runProgram(input) {
-    // write your code here
+    input = input.trim().split("\n");
+    let T = input[0];
+    let line = 1;
+    
+    for(i=0; i<T; i++){
+        let it = input[line].trim().split(" ").map(Number);
+        let N= it[0];
+        let K= it[1];
+        line++
+        let arr =input[line].trim().split(" ").map(Number);
+        line++
+        array(N, K, arr);
+    }
  }
 if (process.env.USER === "") {
   runProgram(``);
